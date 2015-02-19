@@ -1,0 +1,17 @@
+{
+    "name": "xes/lipsum",
+    "type": "library",
+    "description": "Get paragraphs of Lorem Ipsum",
+    "homepage": "https://github.com/dan1elhughes/lipsum",
+    "authors": [
+        {
+            "name": "Dan Hughes",
+            "email": "dh@xes.io",
+            "homepage": "https://xes.io",
+            "role": "Developer"
+        }
+    ],
+	"autoload": {
+		"psr-4": {
+			"xes\\": "src/"
+		}
