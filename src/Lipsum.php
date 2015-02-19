@@ -12,5 +12,9 @@ class Lipsum {
 		$paras = $this->paras;
 		return $paras->getLines($paragraphs);
 	}
+	
+	public function printOut($amount = 1) {
+		echo $this->getParagraphs($amount);
+	}
 }
 ?>
