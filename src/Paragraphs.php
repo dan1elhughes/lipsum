@@ -28,11 +28,16 @@ class Paragraphs {
 	public function getLines($paragraphs = 1) {
 
 		$mod = count($this->lines);
+		
+		$lines = $this->lines;
+		shuffle($lines);
 
 		$result = array();
 		for ($i = 0; $i < $paragraphs; $i++) {
-			$result[] = $this->lines[$i % $mod];
+			$result[] = $lines[$i % $mod];
 		}
+		
+		
 		return '<p>'.implode("</p><p>", $result).'</p>';
 	}
 }
