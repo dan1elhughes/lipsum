@@ -10,9 +10,15 @@ class Lipsum {
 
 	public function getParagraphs($paragraphs = 1) {
 		$paras = $this->paras;
-		return $paras->getLines($paragraphs);
+		return '<p>'.implode('</p><p>', $paras->getLines($paragraphs)) . '</p>';
 	}
-	
+
+	public function getString($strings = 1) {
+		$paras = $this->paras;
+		$ret = $paras->getLines($strings);
+		return ($strings == 1 ? $ret[0] : $ret);
+	}
+
 	public function printOut($amount = 1) {
 		echo $this->getParagraphs($amount);
 	}
