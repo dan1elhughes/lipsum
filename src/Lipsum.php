@@ -22,7 +22,7 @@ class Lipsum {
 	public function getSentence($sentences = 1) {
 		$paras = $this->paras;
 		$ret = $paras->getSentence($sentences);
-		return ($sentences == 1 ? $ret[0] : $ret);
+		return rtrim(implode($ret), " ");
 	}
 
 	public function printOut($amount = 1) {
