@@ -39,6 +39,21 @@ class Paragraphs {
 
 		return $result;
 	}
+
+	public function getSentence($sentences = 1) {
+		$lines = $this->lines;
+		shuffle($lines);
+
+		$all = implode($lines, " ");
+		$splitSentences = explode(". ", $all);
+		$result = array();
+
+		for ($i = 0; $i < $sentences; $i++) {
+			$result[] = $splitSentences[$i % count($splitSentences)] . ". ";
+		}
+
+		return $result;
+	}
 }
 
 ?>

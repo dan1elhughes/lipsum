@@ -19,6 +19,12 @@ class Lipsum {
 		return ($strings == 1 ? $ret[0] : $ret);
 	}
 
+	public function getSentence($sentences = 1) {
+		$paras = $this->paras;
+		$ret = $paras->getSentence($sentences);
+		return ($sentences == 1 ? $ret[0] : $ret);
+	}
+
 	public function printOut($amount = 1) {
 		echo $this->getParagraphs($amount);
 	}
